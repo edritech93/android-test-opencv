@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CameraView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_toStartOf="@+id/imageButton1"
+        android:layout_toLeftOf="@+id/imageButton1" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/imageButton1"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_alignStart="@+id/toggleButton2"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/btn_plus"
+        app:cb_color="@android:color/tertiary_text_dark"
+        app:cb_pressedRingWidth="8dip" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.10"
+        android:textOff="Rec"
+        android:textOn="Stop" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="11dp"
+            android:layout_weight="0.08"
+            android:text="Train"
+            android:textOff="Train"
+            android:textOn="Stop" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.66"
+            android:maxLines="1"
+            android:singleLine="true">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+</RelativeLayout>

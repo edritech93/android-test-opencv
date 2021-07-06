@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/fab"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_search"
+        app:cb_color="@android:color/holo_blue_dark"
+        app:cb_pressedRingWidth="8dip" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
